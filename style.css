@@ -1,0 +1,45 @@
+:root {
+  --primary-color: #90c2f1;
+  --off-white: #e2e8f0;
+  --dark-gray: #6b7280;
+}
+
+
+.navigation {
+  background-color: var(--primary-color);
+  color: black;
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.navigation .nav-brand {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.navigation .nav-pills {
+  text-align: right;
+ 
+}
+
+.navigation .link {
+  color: black;
+}
+.navigation .link-active {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.navigation li {
+  display: inline-block;
+}
+main{
+    text-align: center;
+}
+.angle-input{
+    text-align: center;
+    margin: 0.5rem;
+}
+.side-input{
+    text-align: center;
+    margin: 0.5rem;
+}
