@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hypotenues</title>
+    <title>Area of Triangle</title>
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
@@ -26,19 +26,16 @@
       </ul>
     </nav>
     <main>
-    <h1>Calculate Hypotenuse</h1>
-    <div>
-    <label> a =</label>
-    <input type="number" class="side-input"/>
+    <div class="container">
+      <h1>Enter the base and height </h1>
+      <label for="angle1"> Base  </label>
+      <input type="number" class="sides">
+      <label for="angle2"> Height</label>
+      <input type="number" class="sides">
+      <button id="check"> Check</button>
+      <div id="output"> </div>
     </div>
-    <div>
-    <label>b =</label>
-    <input type="number" class="side-input"/>
-    </div>
-    
-    <button id="hypotenues-btn"> calculate Hypotenues</button>
-    <div id="output"></div>
-    </main>
-    <script src="hypotenues.js"></script>
+  </main>
+  <script src="area.js"></script>
 </body>
 </html>
