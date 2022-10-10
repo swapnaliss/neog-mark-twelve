@@ -11,17 +11,36 @@ const outputE1 = document.querySelector("#output");
 
 }
 
-function isTriangle(){
-    const sumOfAngles = calculateSumOfAngles(Number(inputs[0].value),Number(inputs[1].value),Number(inputs[2].value))
-     if (sumOfAngles === 180 ) {
+function isTriangle() {
+  if (
+    inputs[0].value === "" ||
+    inputs[1].value === "" ||
+    inputs[2].value === ""
+  ) {
+    showMessage("Fields can not be empty.", "red");
+  } else if (
+    inputs[0].value < 0 ||
+    inputs[1].value < 0 ||
+    inputs[2].value < 0
+  ) {
+    showMessage("Negative numbers not allowed.", "red");
+  } else {
+    const SumOfAngles = calculateSumOfAngles(
+      Number(inputs[0].value),
+      Number(inputs[1].value),
+      Number(inputs[2].value)
+    );
 
-        // console.log("yay ! The angles form triangle");
-      outputE1.innerText = "yay ! The angles form triangle";
-         
-     } else {
-       outputE1.innerText ="Oh Oh ! The angles don't  form a triangle ";
-     }   
-    
-     
+    if (SumOfAngles === 180) {
+      showMessage("yey, The angle from a triangle", "green");
+    } else {
+      showMessage("oh oh,The angle don't from a triangle", "red");
+    }
+  }
 }
+
+const showMessage = (message, color) => {
+  outputE1.innerText = message;
+  outputE1.style.color = color;
+};
 isTriangleBtn.addEventListener("click",isTriangle)
