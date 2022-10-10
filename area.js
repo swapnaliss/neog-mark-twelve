@@ -13,6 +13,8 @@ function areaTriangle() {
   const area = areacalc(Number(input[0].value), Number(input[1].value));
   if (Number(input[0].value) > 0 && Number(input[1].value) > 0) {
     display.innerText = "Area of triangle is " + area;
+  }else if (input[0].value === "" && input[1].value ==="") {
+    display.innerText = "Field should not be empty";
   } else {
     display.innerText = " Number should be greater than 0";
   }
